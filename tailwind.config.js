@@ -33,7 +33,6 @@ export const theme = {
   },
   fontWeight: {
     'roman': '300',
-    'bold': '700',
     'link': '400',
   },
 
@@ -49,6 +48,7 @@ export const theme = {
       '4xl': '2,5rem', //40px
       '5xl': '6.25rem',  // 100px
       '6xl': '62.5rem', //1000px
+      '7xl':'',
     },
     keyframes: {
       "accordion-down": {

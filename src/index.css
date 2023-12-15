@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@layer components{
+
+    .activeLink{ 
+        @apply text-black;
+        @apply underline;
+    }
+}
 @font-face{
     font-family:"RF Tone";
     src:url("./assets/fonts/RF Tone/RFTone-Regular.ttf") format('truetype');
