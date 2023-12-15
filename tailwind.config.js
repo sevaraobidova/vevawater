@@ -32,8 +32,15 @@ export const theme = {
     'h6': '0.875rem',
   },
   fontWeight: {
+    'thin':'100',
+    'extrathin': '200',
     'roman': '300',
     'link': '400',
+    'medium': '500',
+    'semibold': '600',
+    'bold': '700',
+    'extrabold': '800',
+    'black': '900',
   },
 
   container: {
