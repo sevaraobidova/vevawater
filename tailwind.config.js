@@ -32,9 +32,15 @@ export const theme = {
     'h6': '0.875rem',
   },
   fontWeight: {
+    'thin':'100',
+    'extrathin': '200',
     'roman': '300',
-    'bold': '700',
     'link': '400',
+    'medium': '500',
+    'semibold': '600',
+    'bold': '700',
+    'extrabold': '800',
+    'black': '900',
   },
 
   container: {
@@ -49,6 +55,7 @@ export const theme = {
       '4xl': '2,5rem', //40px
       '5xl': '6.25rem',  // 100px
       '6xl': '62.5rem', //1000px
+      '7xl':'',
     },
     keyframes: {
       "accordion-down": {
