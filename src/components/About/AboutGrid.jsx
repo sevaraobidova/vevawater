@@ -23,7 +23,7 @@ export default function AboutGrid() {
         },
     ]
   return (
-    <div className='grid grid-cols-2 grid-rows-3 gap-3'>
+    <div className='grid grid-cols-2 grid-rows-3 gap-3 w-[73%]'>
       {
         cardData.map((item, i)=> (<AboutCard key={i} title={item.title} description={item.description} class={item.class}/>))
       }
