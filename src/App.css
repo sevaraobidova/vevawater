@@ -20,3 +20,20 @@
     background: #1CBBEE;
     border-radius: 100px;
   }
+
+    scrollbar-width: thin;
+    scrollbar-color: white #1CBBEE;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: white;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #1CBBEE;
+    border-radius: 100px;
+  }
