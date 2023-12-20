@@ -19,8 +19,7 @@
   ::-webkit-scrollbar-thumb {
     background: #1CBBEE;
     border-radius: 100px;
-  }
-
+ 
     scrollbar-width: thin;
     scrollbar-color: white #1CBBEE;
 }
