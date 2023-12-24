@@ -10,33 +10,35 @@ export default function Header() {
 
     <div className={` bg-[url('/src/assets/images/icons/wavy.svg')] bg-gray-light`}>
 
-      <nav className='container mx-auto py-4  justify-between items-center '>
+      <nav className='container mx-auto py-4  justify-between items-center'>
 
-        <div className='flex flex-row items-center ' >
+        <div className='flex flex-row items-center justify-between  sm:justify-between ' >
           {/* mobile menu */}
-          <Menu size="hidden sm:block"/>
-          <Link to="/" className='basis-1/3 items-center'> <img src={logo} alt="" /></Link>
+          <div className='flex  gap-1 py-3 items-center'>
+            <Menu  variant="hidden sm:block" />
+            <Link to="/" > <img src={logo} alt="" /></Link>
+         </div>
           
-          <ul className=' flex flex-row basis-1/2  self-center sm:hidden' >
-            <li className='basis-1/3 font-link text-h4 ' >
+          <ul className=' flex flex-row  justify-between gap-10  self-center sm:hidden' >
+            <li className='  font-link text-h4 ' >
               <NavLink to='/' className='text-gray-inactive  aria-[current=page]:activeLink '>
                 Главная
               </NavLink>
 
         </li>
-          <li className='basis-1/3 font-link text-h4 '>
+          <li className=' font-link text-h4 '>
             <NavLink to='/shop' className='text-gray-inactive aria-[current=page]:activeLink '>Магазин товаров</NavLink>
 
             </li>
           </ul>
-          <FormLocation size="basis-1/2 sm:hidden" />
-          <div className='basis-1/3 flex items-center gap-1'>
-            <Language size=" basis-1" />
-            <HeaderLogin size="" />
+          <FormLocation size=" sm:hidden" />
+          <div className=' flex items-center gap-1'>
+            <Language />
+            <HeaderLogin  />
           </div>
 
         </div>
-        <FormLocation/>
+        <FormLocation size="" visibility="hidden sm:block"/>
       </nav>
     </div>
   )

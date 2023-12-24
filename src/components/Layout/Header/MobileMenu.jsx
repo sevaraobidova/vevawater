@@ -4,10 +4,10 @@ import { Sheet, SheetContent, SheetFooter, SheetHeader, SheetTrigger } from "../
 import menu from "/src/assets/images/icons/bars/24/Outline.svg";
 import Phone from "../Footer/Phone";
 import SocialMedia from "../Footer/SocialMedia";
-export default function Menu({ size }) {
+export default function Menu({ size ,variant}) {
     return (
 
-        <div className={size}>
+        <div className={`${size} ${variant}`}>
             <Sheet  >
                 <SheetTrigger >
                     <Button variant="ghost" size="icon">
