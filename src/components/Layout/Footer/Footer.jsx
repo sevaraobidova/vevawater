@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from '/src/assets/images/logo.svg'
-import SocialMedia from './SocialMedia'
+import Contact from './Contact'
 import Phone from './Phone'
 
 export default function Footer() {
@@ -19,7 +19,7 @@ export default function Footer() {
             <li className='text-h6 font-link underline '><Link>Договор оферты</Link></li>
             <li className='text-h6 font-link underline '><Link>Сертификаты</Link></li>
           </ul>
-          <SocialMedia size={'basis-1/2'}/>
+          <Contact size={'basis-1/2'}/>
           <Phone size={'basis-1/3'}/>
         </div>
       </div>
