@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import { appFetch } from "../../utils/api";
 import { useQuery } from "@tanstack/react-query";
@@ -44,6 +44,7 @@ export default function ShopProduct() {
           {categories.map((category) => {
             return (
               <NavLink
+                key={category.id}
                 to={`/shop/${category.id}?type=${category.categoryType}`}
                 className={({ isActive }) => getNavStyle(isActive)}
               >
