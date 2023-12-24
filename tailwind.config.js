@@ -57,6 +57,13 @@ export const theme = {
       '6xl': '62.5rem', //1000px
       '7xl':'',
     },
+  
+    width: {
+      '52':'52px',
+    },
+    margin: {
+      '14.5':'58px',
+    },
     keyframes: {
       "accordion-down": {
         from: { height: 0 },
