@@ -37,7 +37,7 @@ export default function Menu({ size ,variant}) {
                     <SheetFooter className="mt-14.5 ">
                         <div className="flex flex-col items-start gap-2">
 
-                        <Phone />
+                        <Phone position='left' />
                         <SocialMedia size="items-left" />
                         </div>
                         
