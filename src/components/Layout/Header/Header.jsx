@@ -18,7 +18,7 @@ export default function Header() {
 
     <div className={isShopPage ? 'wave' : 'bg-[#E4EAF3]'}>
 
-      <nav className='container mx-auto py-0  justify-between items-center'>
+      <nav className='container mx-auto py-4  justify-between items-center'>
 
         <div className='flex flex-row items-center justify-between  sm:justify-between ' >
           {/* mobile menu */}
