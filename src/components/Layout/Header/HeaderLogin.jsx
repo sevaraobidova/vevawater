@@ -1,9 +1,9 @@
 import profile from '/src/assets/images/icons/profile/24/Outline.svg'
-function HeaderLogin({size}) {
+function HeaderLogin() {
     return ( 
-        <form action="" className={`${size} `}>
-            <div className='flex flex-row bg-white w-fill px-2 py-2 w-44 rounded-r-5xl gap-1'>
-            <img src={profile} alt="" className='basis-1 '/>
+        <form action="" >
+            <div className='flex flex-row bg-white w-fill px-2 py-2 w-48 rounded-r-5xl gap-1  sm:w-full sm:rounded-3xl   '>
+            <img src={profile} alt="" className='size-10 '/>
                 <button className='text-h5 font-normal break-keep sm:hidden  '> Войти в кабинет</button>
 
             </div>
