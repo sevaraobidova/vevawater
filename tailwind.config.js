@@ -57,6 +57,13 @@ export const theme = {
       '6xl': '62.5rem', //1000px
       '7xl':'',
     },
+  
+    width: {
+      '52':'52px',
+    },
+    margin: {
+      '14.5':'58px',
+    },
     keyframes: {
       "accordion-down": {
         from: { height: 0 },
@@ -70,6 +77,22 @@ export const theme = {
     animation: {
       "accordion-down": "accordion-down 0.2s ease-out",
       "accordion-up": "accordion-up 0.2s ease-out",
+    },
+    screens: {
+      '2xl': {'max': '1536px'},
+      // => @media (max-width: 1536px) { ... }
+
+      'xl': {'max': '1280px'},
+      // => @media (max-width: 1280px) { ... }
+
+      'lg': {'max': '1024px'},
+      // => @media (max-width: 1024px) { ... }
+
+      'md': {'max': '768px'},
+      // => @media (max-width: 768px) { ... }
+
+      'sm': {'max': '640px'},
+      // => @media (max-width: 640px) { ... }
     },
   },
 };

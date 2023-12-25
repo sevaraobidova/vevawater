@@ -1,29 +1,53 @@
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
-import logo from '/src/assets/images/logo.svg'
+import { Link, NavLink } from 'react-router-dom';
+import Menu from './MobileMenu';
+import FormLocation from './FormLocation';
+import Language from './HeaderLang';
+import HeaderLogin from './HeaderLogin';
+import logo from '/src/assets/images/logo.svg';
+import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 export default function Header() {
+  const location = useLocation();
+  const [isShopPage, setIsShopPage] = useState(false);
+  
+  useEffect(() => {
+    setIsShopPage(location.pathname === '/shop');
+  }, [location]);
   return (
-    <div className='container mx-auto py-4 justify-between '>
 
-    <div className='flex flex-row' >
-      <Link to="/" className='basis-1/3'> <img src={logo} alt="" /></Link>
-      <ul className=' flex flex-row basis-1/2 ' >
-        <li className='basis-1/4 font-link text-h4 ' >
-            <NavLink to='/' className='text-gray-inactive  aria-[current=page]:activeLink '>
-              Главная
-            </NavLink>
+    <div className={isShopPage ? 'wave' : 'bg-[#E4EAF3]'}>
+
+      <nav className='container mx-auto py-0  justify-between items-center'>
+
+        <div className='flex flex-row items-center justify-between  sm:justify-between ' >
+          {/* mobile menu */}
+          <div className='flex  gap-1 py-3 items-center'>
+            <Menu  variant="hidden sm:block" />
+            <Link to="/" > <img src={logo} alt="" /></Link>
+         </div>
+          
+          <ul className=' flex flex-row  justify-between gap-10  self-center sm:hidden' >
+            <li className='  font-link text-h4 ' >
+              <NavLink to='/' className='text-gray-inactive  aria-[current=page]:activeLink '>
+                Главная
+              </NavLink>
 
         </li>
-          <li className='basis-1/3 font-link text-h4 '>
+          <li className=' font-link text-h4 '>
             <NavLink to='/shop' className='text-gray-inactive aria-[current=page]:activeLink '>Магазин товаров</NavLink>
 
-        </li>
-      </ul>
-      <form className='basis-1/4'>
-        <input type="text" placeholder='your location' />
-      </form>
-      <form className='basis-1/4' action="">  <button>Войти в кабинет</button></form>
-    </div>
+            </li>
+          </ul>
+          <FormLocation size=" sm:hidden" />
+          <div className=' flex items-center gap-1'>
+            <Language />
+            <HeaderLogin  />
+          </div>
+
+        </div>
+        <FormLocation size="" visibility="hidden sm:block"/>
+      </nav>
     </div>
   )
 }
