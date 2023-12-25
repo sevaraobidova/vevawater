@@ -5,12 +5,20 @@ import FormLocation from './FormLocation';
 import Language from './HeaderLang';
 import HeaderLogin from './HeaderLogin';
 import logo from '/src/assets/images/logo.svg';
+import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 export default function Header() {
+  const location = useLocation();
+  const [isShopPage, setIsShopPage] = useState(false);
+  
+  useEffect(() => {
+    setIsShopPage(location.pathname === '/shop');
+  }, [location]);
   return (
 
-    <div className={` bg-[url('/src/assets/images/icons/wavy.svg')] bg-gray-light`}>
+    <div className={isShopPage ? 'wave' : 'bg-[#E4EAF3]'}>
 
-      <nav className='container mx-auto py-4  justify-between items-center'>
+      <nav className='container mx-auto py-0  justify-between items-center'>
 
         <div className='flex flex-row items-center justify-between  sm:justify-between ' >
           {/* mobile menu */}
