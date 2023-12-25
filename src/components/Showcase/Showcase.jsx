@@ -1,9 +1,11 @@
 import React from 'react'
+import Carusel from './Carusel'
+import './styles.css'
 
 export default function Showcase() {
   return (
-    <div>
-      <h1>Showcase</h1>
+    <div id='showcase' className="bg-[#E4EAF3] showcase">
+      <Carusel />
     </div>
-  )
+  );
 }
