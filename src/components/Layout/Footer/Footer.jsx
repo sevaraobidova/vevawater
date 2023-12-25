@@ -7,9 +7,9 @@ import Phone from './Phone'
 export default function Footer() {
   return (
     <>
-      <div className='container mx-auto py-4 box-border gap-3 sm:py-2 '>
+      <div className='container mx-auto py-4 box-border gap-3 sm:py-2'>
         {/* divider line */}
-        <hr class="my-10 h-0.5 border-t-0 bg-gray opacity-100 dark:opacity-50 sm:my-3" />
+        <hr className="my-10 h-0.5 border-t-0 bg-gray opacity-100 dark:opacity-50 sm:my-3" />
 
         <div className='flex flex-row gap-40 items-center  sm:gap-4 sm:justify-between' >
 

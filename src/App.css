@@ -36,3 +36,24 @@
     background: #1CBBEE;
     border-radius: 100px;
   }
+
+  .wave {
+  --mask: radial-gradient(178.89px at 50% calc(100% - 240px),#000 99%,#0000 101%) calc(50% - 160px) 0/320px 100%,radial-gradient(178.89px at 50% calc(100% + 160px),#0000 99%,#000 101%) 50% calc(100% - 80px) /320px 100% repeat-x;
+  -webkit-mask: var(--mask);
+ mask: var(--mask);
+ position: fixed;
+top: 0px;
+width: 100%;
+z-index: 999;
+  background: #F2F4F7;
+  height: 200px;
+    }
+
+    @media (max-width: 700px) {
+      .wave {
+        --mask: radial-gradient(111.8px at 50% calc(100% - 150px),#000 99%,#0000 101%) calc(50% - 100px) 0/200px 100%,radial-gradient(111.8px at 50% calc(100% + 100px),#0000 99%,#000 101%) 50% calc(100% - 50px) /200px 100% repeat-x;
+        -webkit-mask: var(--mask);
+        height: 220px;
+        z-index: 0;
+    }
+    }
