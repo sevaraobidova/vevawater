@@ -16,7 +16,7 @@ export default function Header() {
   }, [location]);
   return (
 
-    <div className={isShopPage ? 'wave' : 'bg-[#E4EAF3] sticky w-[100%] top-0 z-[999] sm:z-0'}>
+    <div className={isShopPage ? 'wave' : 'bg-[#E4EAF3] sticky w-[100%] top-0 z-[999] sm:z-[9]'}>
 
       <nav className='container mx-auto py-4  justify-between items-center'>
 
