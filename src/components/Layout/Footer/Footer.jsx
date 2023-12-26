@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from '/src/assets/images/logo.svg'
-import Contact from './Contact'
-import Phone from './Phone'
+import Contact from './components/Contact'
+import Phone from './components/Phone'
 
 export default function Footer() {
   return (

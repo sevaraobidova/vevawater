@@ -2,8 +2,8 @@ import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Layout from './components/Layout/Layout';
 import Home from './pages/Home/Home';
-import ShopProduct from './pages/ShopProduct/ShopProduct';
-import ProfileBooking from './pages/Profile/ProfileBooking/ProfileBooking';
+import ShopProduct from './pages/Profile/components/ShopProduct/ShopProduct';
+import ProfileBooking from './pages/Profile/components/ProfileBooking/ProfileBooking';
 
 function App() {
   return (
