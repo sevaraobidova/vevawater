@@ -15,7 +15,7 @@ export default function Menu({ size ,variant}) {
                     </Button>
 
                 </SheetTrigger>
-                <SheetContent side='left' className="py-24 px-4 ">
+                <SheetContent side='left' className="py-24 px-4 z-[999]">
                     <SheetHeader>
                         <ul className="flex flex-col gap-5">
                             <li >
