@@ -4,8 +4,8 @@ import {
     CardContent,
     CardHeader,
     CardTitle,
-  } from "../ui/card"
-  import wave from '../../assets/images/cardWave.svg'
+  } from "../../../../components/ui/card"
+  import wave from '../../../../assets/images/cardWave.svg'
   
 
 export default function AboutCard(props) {

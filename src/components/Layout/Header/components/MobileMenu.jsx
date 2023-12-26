@@ -1,9 +1,9 @@
 import { NavLink ,Link} from "react-router-dom";
-import { Button } from "../../ui/button";
-import { Sheet, SheetContent, SheetFooter, SheetHeader, SheetTrigger } from "../../ui/sheet";
+import { Button } from "../../../ui/button";
+import { Sheet, SheetContent, SheetFooter, SheetHeader, SheetTrigger } from "../../../ui/sheet";
 import menu from "/src/assets/images/icons/bars/24/Outline.svg";
-import Phone from "../Footer/Phone";
-import SocialMedia from "../Footer/SocialMedia";
+import Phone from "../../Footer/components/Phone";
+import SocialMedia from "../../Footer/components/SocialMedia";
 export default function Menu({ size ,variant}) {
     return (
 

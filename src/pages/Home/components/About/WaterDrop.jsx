@@ -1,6 +1,6 @@
 import React from "react";
-import gif from '../../assets/images/blq-blq.gif';
-import water from '../../assets/images/water.webp'
+import gif from '../../../../assets/images/blq-blq.gif';
+import water from '../../../../assets/images/water.webp'
 
 export default function WaterDrop () {
     return (

@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom';
-import Menu from './MobileMenu';
-import FormLocation from './FormLocation';
-import Language from './HeaderLang';
-import HeaderLogin from './HeaderLogin';
+import Menu from './components/MobileMenu';
+import FormLocation from './components/FormLocation';
+import Language from './components/HeaderLang';
+import HeaderLogin from './components/HeaderLogin';
 import logo from '/src/assets/images/logo.svg';
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
@@ -16,7 +16,7 @@ export default function Header() {
   }, [location]);
   return (
 
-    <div className={isShopPage ? 'wave' : 'bg-[#E4EAF3]'}>
+    <div className={isShopPage ? 'wave' : 'bg-[#E4EAF3] sticky w-[100%] top-0 z-[999] sm:z-0'}>
 
       <nav className='container mx-auto py-4  justify-between items-center'>
 
