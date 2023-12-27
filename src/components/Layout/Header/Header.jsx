@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom';
 import Menu from './components/MobileMenu';
-import FormLocation from './components/FormLocation';
+import {FormLocation} from './components/FormLocation';
 import Language from './components/HeaderLang';
 import HeaderLogin from './components/HeaderLogin';
 import logo from '/src/assets/images/logo.svg';

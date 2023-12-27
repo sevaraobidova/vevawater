@@ -3,7 +3,7 @@ import { Button } from "../../../ui/button";
 
 
 
-export default function FormLocation({size,visibility}) {
+export  function FormLocation({size,visibility}) {
     return ( 
         <>
           <form className={`${size} flex items-center sm:flex-none`}>

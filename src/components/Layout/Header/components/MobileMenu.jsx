@@ -4,7 +4,13 @@ import { Sheet, SheetContent, SheetFooter, SheetHeader, SheetTrigger } from "../
 import menu from "/src/assets/images/icons/bars/24/Outline.svg";
 import Phone from "../../Footer/components/Phone";
 import SocialMedia from "../../Footer/components/SocialMedia";
-export default function Menu({ size ,variant}) {
+export default function Menu({ size, variant }) {
+
+    function handleClick(e) {
+        
+        return Sheet.style.display = 'none';
+
+    }
     return (
 
         <div className={`${size} ${variant}`}>
@@ -19,10 +25,16 @@ export default function Menu({ size ,variant}) {
                     <SheetHeader>
                         <ul className="flex flex-col gap-5">
                             <li >
-                                <NavLink to='/' className='text-gray-inactive  aria-[current=page]:activeLink '>Главная</NavLink>
+                                <NavLink to='/'
+                                    className='text-gray-inactive  aria-[current=page]:activeLink  '
+                                    onClick={handleClick}
+                                >Главная</NavLink>
                             </li>
                             <li >
-                                <NavLink to='/shop' className='text-gray-inactive  aria-[current=page]:activeLink '>Магазин товаров</NavLink>
+                                <NavLink to='/shop'
+                                    className='text-gray-inactive  aria-[current=page]:activeLink '
+                                    onClick={handleClick}
+                                >Магазин товаров</NavLink>
                                 
                             </li>
                             <li>
