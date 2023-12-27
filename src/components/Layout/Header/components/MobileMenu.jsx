@@ -6,6 +6,7 @@ import Phone from "../../Footer/components/Phone";
 import SocialMedia from "../../Footer/components/SocialMedia";
 export default function Menu({ size, variant }) {
 
+    
     function handleClick(e) {
         
         return Sheet.style.display = 'none';
@@ -25,10 +26,12 @@ export default function Menu({ size, variant }) {
                     <SheetHeader>
                         <ul className="flex flex-col gap-5">
                             <li >
+                                
                                 <NavLink to='/'
                                     className='text-gray-inactive  aria-[current=page]:activeLink  '
                                     onClick={handleClick}
                                 >Главная</NavLink>
+                                
                             </li>
                             <li >
                                 <NavLink to='/shop'
