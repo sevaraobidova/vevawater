@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function BookingStatus() {
+export default function OrderStatus() {
   return (
     <div>
       <h1>Оповещения</h1>
