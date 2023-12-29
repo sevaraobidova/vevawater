@@ -4,16 +4,18 @@ import { useEffect, useRef, useState } from 'react';
 import 'leaflet/dist/leaflet.css'
 
 import { MapContainer ,Marker,Polygon,Popup,TileLayer} from 'react-leaflet';
+import { LocationComponent } from './LocationComponent';
 
 
-const MapComponent = () => {
+const MapComponent = ({location,onSaveLocation,onClose,visibility}) => {
     // const location = useGeolocation();
     const [position, setPosition] = useState(null);
-
+   
     useEffect(() => {
         // Try to get the user's location when the component mounts
         navigator.geolocation.getCurrentPosition(
             (location) => {
+               
                 setPosition([location.coords.latitude, location.coords.longitude]);
             },
             (error) => {
@@ -22,13 +24,19 @@ const MapComponent = () => {
         );
     }, []);
  
+    
 
     const handleMapClick = (e) => {
         setPosition([e.latlng.lat, e.latlng.lng]);
-}
+    };
+    const handleSaveLocation = () => {
+        onSaveLocation(position[0], position[1]);
+        // onSaveLocation(position[0], position[1]);
+        onClose();
+    };
     return (
         <>
-    <MapContainer style={{background:"red",border:'1px solid red',height:"400px"}}
+            <MapContainer className={visibility} style={{height:'70vh',width:'auto'}}
         center={position || [41.316441, 69.294861]}
                 zoom={13}
                 onClick={handleMapClick}
@@ -40,6 +48,7 @@ const MapComponent = () => {
             {position && <Marker position={position}><Popup>Your location</Popup></Marker>}
         
             </MapContainer>
+            {position && <button onClick={handleSaveLocation}>Save Location</button>}
      </>
     )
 };
