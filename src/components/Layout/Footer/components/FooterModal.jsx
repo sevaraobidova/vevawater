@@ -11,9 +11,10 @@ import {
 export default function FooterModal (props) {
     return (
         <Dialog>
-            <DialogTrigger>{props.name}</DialogTrigger>
+            <DialogTrigger className='text-h6 font-link underline'>{props.name}</DialogTrigger>
             <DialogContent className="rounded-[20px]">
-                <DialogHeader>bla bla</DialogHeader>
+                <DialogHeader>{props.header}</DialogHeader>
+                <iframe src={props.file} className="w-[100%] h-[80vh] rounded-[20px]"></iframe>
             </DialogContent>
         </Dialog>
     )
