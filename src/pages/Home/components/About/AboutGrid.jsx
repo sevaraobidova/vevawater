@@ -18,8 +18,6 @@ export default function AboutGrid() {
     autoplay={true}
     spaceBetween={0}
     slidesPerView={1}
-    onSlideChange={() => console.log('slide change')}
-    onSwiper={(swiper) => console.log(swiper)}
     >
     {
         cardData.map((item, index)=> (<SwiperSlide >
