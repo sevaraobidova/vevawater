@@ -1975,6 +1975,18 @@
     legacy-swc-helpers "npm:@swc/helpers@=0.4.14"
     tslib "^2.4.0"
 
+"@tanstack/query-core@5.17.0":
+  version "5.17.0"
+  resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-5.17.0.tgz#3fd41e8557de9904c76e92b3820f62407223c990"
+  integrity sha512-LoBaPtbMY26kRS+ohII4thTsWkJJsXKGitOLikTo2aqPA4yy7cfFJITs8DRnuERT7tLF5xfG9Lnm33Vp/38Vmw==
+
+"@tanstack/react-query@^5.17.0":
+  version "5.17.0"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-5.17.0.tgz#3a50e2eb2310cfb560ddf97fd4ffac1da092a586"
+  integrity sha512-iNSn6ZA7mHUjrT0a271eKoa1oR1HznlrGbb475awft1kuP3zrhyUCrI8tlGowOr7zRoAxJholjwxO+gfz1IObw==
+  dependencies:
+    "@tanstack/query-core" "5.17.0"
+
 "@trysound/sax@0.2.0":
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/@trysound/sax/-/sax-0.2.0.tgz#cccaab758af56761eb7bf37af6f03f326dd798ad"
