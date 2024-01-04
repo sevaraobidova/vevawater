@@ -41,7 +41,7 @@ export default function Carusel() {
       <Swiper
         onSwiper={setSwiper}
         spaceBetween={100}
-        effect={"coverflow"}
+        // effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
         loop={false}
@@ -67,12 +67,10 @@ export default function Carusel() {
             key={index}
             style={{
               opacity: activeIndex === index ? 1 : 0.45, // Adjust the opacity
-              // backgroundColor:
-              //   activeIndex === index ? "transparent" : "rgb(212 212 216)", // Background color for inactive slides
             }}
           >
             <img src={item} className="swiper-image" />
-            <MyButton link="type here your link address">Заказать</MyButton>
+            {activeIndex === index ? <MyButton link="type here your link address">Заказать</MyButton> : ''}
           </SwiperSlide>
         ))}
         <div className="slider-controller">

@@ -1,7 +1,7 @@
 import React from "react";
 import Counter from "../../../components/global/Counter/Counter";
 import Bottle from "../../../assets/images/temp/Bottle.png";
-import { Button } from "../../../components/ui/button";
+import MyButton from "../../../components/global/Button/Button";
 
 export default function ShopCard({ product }) {
   return (
@@ -13,7 +13,7 @@ export default function ShopCard({ product }) {
         <ul className="w-full text-sm">
           <li className="flex gap-1 items-end">
             <span>Нагрев</span>
-            <span className="grow border-b border-dotted border-b-2 border-gray"></span>
+            <span className="grow border-dotted border-b-2 border-gray"></span>
             <span className="font-bold">есть</span>
           </li>
         </ul>
@@ -27,7 +27,7 @@ export default function ShopCard({ product }) {
             <p className="text-blue text-xl">15 000 сум</p>
           </div>
         </div>
-        <Button variant="default">Добавить в корзину</Button>
+        <MyButton>Добавить в корзину</MyButton>
       </div>
     </div>
   );
