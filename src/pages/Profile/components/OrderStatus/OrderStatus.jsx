@@ -1,9 +1,10 @@
 import React from 'react'
+import Title from '../Title'
 
 export default function OrderStatus() {
   return (
     <div>
-      <h1>Оповещения</h1>
+      <Title text='Оповещения'/>
     </div>
   )
 }
