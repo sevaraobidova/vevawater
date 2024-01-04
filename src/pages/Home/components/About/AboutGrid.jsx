@@ -20,7 +20,7 @@ export default function AboutGrid() {
     slidesPerView={1}
     >
     {
-        cardData.map((item, index)=> (<SwiperSlide >
+        cardData.map((item, index)=> (<SwiperSlide key={index}>
           <AboutCard key={index} title={item.title} description={item.description} class={item.width}/>
         </SwiperSlide>))
       }
