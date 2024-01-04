@@ -1,9 +1,10 @@
 import React from 'react'
+import Title from '../Title'
 
 export default function ShoppingCart() {
   return (
     <div>
-      <h1>Моя корзина</h1>
+      <Title text='Моя корзина'/>
     </div>
   )
 }
