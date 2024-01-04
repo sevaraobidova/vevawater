@@ -67,8 +67,8 @@ export default function Carusel() {
             key={index}
             style={{
               opacity: activeIndex === index ? 1 : 0.45, // Adjust the opacity
-              backgroundColor:
-                activeIndex === index ? "transparent" : "rgb(212 212 216)", // Background color for inactive slides
+              // backgroundColor:
+              //   activeIndex === index ? "transparent" : "rgb(212 212 216)", // Background color for inactive slides
             }}
           >
             <img src={item} className="swiper-image" />
