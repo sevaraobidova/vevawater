@@ -74,6 +74,7 @@ export default function Carusel() {
               activeIndex === index ? "swiper-slide-active" : ""
             } relative bg-center bg-cover p-10`}
           >
+
             <img src={item} className="w-72 h-96 object-contain pb-4" />
             {index === 1 && isVisible && <WaterDetail />}
             {index === 1 && (
@@ -92,6 +93,7 @@ export default function Carusel() {
                 Заказать
               </MyButton>
             )}
+
           </SwiperSlide>
         ))}
         <CaruselController />

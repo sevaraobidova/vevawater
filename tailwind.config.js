@@ -10,7 +10,7 @@ export const content = [
 ];
 export const theme = {
   colors: {
-    slate: colors.slate,
+    // slate: colors.slate,
     'light-black': '#414042',
     'black': '#000',
     'white': '#fff',
