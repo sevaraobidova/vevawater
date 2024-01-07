@@ -6,9 +6,9 @@ import Showcase from './components/Showcase/Showcase';
 
 export default function Home() {
   return (
-    <div className=" bg-indigo-500 text-red">
+    <div>
       <Showcase />
-      <div className="wave z-0 static"></div>
+      <div className="wave1 z-0 static"></div>
       <About />
       <Telegram
         bg={`bg-blue w-full hidden `}

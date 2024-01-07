@@ -74,6 +74,9 @@ export const theme = {
       '6xl': '62.5rem', //1000px
       '7xl': '',
     },
+    boxShadow: {
+      '3xl': '0px 20px 20px 0px rgba(0, 0, 0, 0.20)'
+    },
     spacing: {
         '25': '100px',
       },

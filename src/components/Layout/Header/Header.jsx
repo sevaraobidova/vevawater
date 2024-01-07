@@ -14,9 +14,23 @@ export default function Header() {
   useEffect(() => {
     setIsShopPage(location.pathname === '/shop');
   }, [location]);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
 
-    <div className={isShopPage ? 'wave' : 'bg-[#E4EAF3] sticky w-[100%] top-0 z-[999] sm:z-[9]'}>
+    <div className={isShopPage ? 'wave' : `sticky w-[100%] top-0 z-[999] sm:z-[9] ${isScrolled ? 'bg-gray' : 'bg-[#eaedf4]'}`}>
 
       <nav className='container mx-auto py-4  justify-between items-center'>
 

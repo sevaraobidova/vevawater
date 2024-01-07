@@ -87,8 +87,8 @@ export default function Carusel() {
             )}
             {activeIndex === index && (
               <MyButton
-                className="shadow-xl"
                 link="type here your link address"
+                shadow='yes'
               >
                 Заказать
               </MyButton>
