@@ -74,6 +74,9 @@ export const theme = {
       '6xl': '62.5rem', //1000px
       '7xl': '',
     },
+    spacing: {
+        '25': '100px',
+      },
 
     width: {
       '52': '52px',

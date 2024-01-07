@@ -1,46 +1,4 @@
-/* #app { height: 100% }
-html,
-body {
-  position: relative;
-  height: 100%;
-}
-
-body {
-  background: #eee;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #000;
-  margin: 0;
-  padding: 0;
-} */
-
-.swiper {
-  width: 100%;
-  
-}
-
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* .swiper-slide img {
-  display: block;
-  width: 100%;
-} */
-
-.swiper-image {
-  width: 300px;
-  height: 600px;
-  object-fit: contain; /* Maintain aspect ratio */
-}
 .showcase{
+    @apply bg-no-repeat bg-center h-screen w-11/12 pt-20;
     background-image: url('../../../../assets/images/everest.png');
-    height: calc(100vh);
-    width: 97vw;
-    padding: 50px 0;
 }

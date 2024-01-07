@@ -27,6 +27,7 @@
     "react-leaflet-cluster": "^2.1.0",
     "react-router-dom": "^6.20.1",
     "shadcn-ui": "^0.4.1",
+    "styled-components": "^6.1.6",
     "swiper": "^11.0.5",
     "tailwind-merge": "^2.1.0",
     "tailwindcss-animate": "^1.0.7",
