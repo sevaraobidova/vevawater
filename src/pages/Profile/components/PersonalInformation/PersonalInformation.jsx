@@ -5,10 +5,10 @@ import LegalInfo from './components/LegalInfo'
 
 export default function PersonalInformation() {
   return (
-    <div className='mt-[50px]'>
+    <div className='mt-[50px] sm:mt-[25px]'>
       <Title text='Личная информация'/>
-      {/* <UserInfo/>
-      <LegalInfo/> */}
+      {/* <UserInfo/> */}
+      <LegalInfo/>
     </div>
   )
 }
