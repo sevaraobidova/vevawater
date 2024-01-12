@@ -24,6 +24,11 @@
     scrollbar-color: white #1CBBEE;
 }
 
+#inputID1::placeholder, #inputID2::placeholder {
+  color: #000000;
+  opacity: 1;
+}
+
 ::-webkit-scrollbar {
     width: 10px;
   }
