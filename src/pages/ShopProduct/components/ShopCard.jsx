@@ -27,7 +27,7 @@ export default function ShopCard({ product }) {
             <p className="text-blue text-xl">15 000 сум</p>
           </div>
         </div>
-        <MyButton>Добавить в корзину</MyButton>
+        <MyButton variant="default" onClick={() => onAddToCart(product)}>Добавить в корзину</MyButton>
       </div>
     </div>
   );
