@@ -15,10 +15,10 @@ export default function TabsMobile () {
   };
     return (
        <Select onValueChange={(event) => handleSelectChange(event)}>
-        <SelectTrigger className="w-[100%] hidden sm:flex" >
+        <SelectTrigger className="w-[100%] hidden sm:flex bg-white border-none" >
         <SelectValue placeholder="Select"/>
         </SelectTrigger> 
-        <SelectContent >
+        <SelectContent className='bg-white border-blue'>
             <SelectItem value='cart'><TabsButton name='Ваша корзина' number='0' link='cart'/></SelectItem>
             <SelectItem value='history'><TabsButton name='История заказов' number='0' link='history'/></SelectItem>
             <SelectItem value='info'><TabsButton name='Личная информация' link='info'/></SelectItem>
