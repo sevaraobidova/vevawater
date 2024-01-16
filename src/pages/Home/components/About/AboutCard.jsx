@@ -10,7 +10,7 @@ import {
 
 export default function AboutCard(props) {
   return (
-    <Card className={props.class}>
+    <Card className={props.style}>
        <CardHeader>
         <CardTitle className='text-[18px]'>{props.title}</CardTitle>
         </CardHeader>
