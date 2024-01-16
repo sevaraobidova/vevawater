@@ -5,8 +5,8 @@ import AboutMobile from './AboutMobile';
 
 export default function About() {
   return (
-    <div className='container mx-auto'>
-      <div className='flex justify-between mt-[60px] mb-[80px]'>
+    <div className='container mx-auto mt-[60px] mb-[80px]'>
+      <div className='flex justify-between'>
       <AboutGrid/>
       <WaterDrop/>
       </div>
