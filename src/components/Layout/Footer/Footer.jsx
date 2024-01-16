@@ -6,6 +6,7 @@ import Phone from './components/Phone'
 import FooterModal from './components/FooterModal'
 import oferta from '../../../assets/pdf/vevaContract.pdf'
 import sertificate from '../../../assets/pdf/vevasertificate.pdf'
+import FooterModalMobile from './components/FooterModalMobile'
 
 export default function Footer() {
   return (
@@ -23,8 +24,10 @@ export default function Footer() {
               <li className='text-h6 font-roman'>Все права защищены. 2023</li>
             </ul>
             <ul className=' flex flex-col gap-y-2'>
-              <li className='text-h6 font-link underline '><FooterModal name='Договор оферты' file={oferta} header='Ознакомьтесь с правилами'/></li>
-              <li className='text-h6 font-link underline '><FooterModal name='Сертификаты' file={sertificate} header='Наши сертификаты'/></li>
+              <li className='text-h6 font-link underline sm:hidden'><FooterModal name='Договор оферты' file={oferta} header='Ознакомьтесь с правилами'/></li>
+              <li className='text-h6 font-link underline hidden sm:block'><FooterModalMobile name='Договор оферты' file={oferta} header='Ознакомьтесь с правилами'/></li>
+              <li className='text-h6 font-link underline sm:hidden'><FooterModal name='Сертификаты' file={sertificate} header='Наши сертификаты'/></li>
+              <li className='text-h6 font-link underline hidden sm:block'><FooterModalMobile name='Сертификаты' file={sertificate} header='Наши сертификаты'/></li>
             </ul>
           </div>
           
