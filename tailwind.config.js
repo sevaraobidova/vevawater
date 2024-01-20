@@ -1,63 +1,63 @@
-const colors = require('tailwindcss/colors')
+const colors = require("tailwindcss/colors");
 
 /** @type {import('tailwindcss').Config} */
 export const darkMode = ["class"];
 export const content = [
-  './pages/**/*.{js,jsx}',
-  './components/**/*.{js,jsx}',
-  './app/**/*.{js,jsx}',
-  './src/**/*.{js,jsx}',
+  "./pages/**/*.{js,jsx}",
+  "./components/**/*.{js,jsx}",
+  "./app/**/*.{js,jsx}",
+  "./src/**/*.{js,jsx}",
 ];
 export const theme = {
   colors: {
     // slate: colors.slate,
-    'light-black': '#414042',
-    'black': '#000',
-    'white': '#fff',
-    'blue': ' #1CBBEE',
-    'gray-light': '#F2F4F7',
-    'gray': '#E4EAF3',
-    'gray-dark': '#ffffff4d',
-    'gray-inactive': '#98A2B3', //disabled text in this color
-    'red': '#E9573F',
-    'green': '#62BB00'
+    "light-black": "#414042",
+    black: "#000",
+    white: "#fff",
+    blue: " #1CBBEE",
+    "gray-light": "#F2F4F7",
+    gray: "#E4EAF3",
+    "gray-dark": "#ffffff4d",
+    "gray-inactive": "#98A2B3", //disabled text in this color
+    red: "#E9573F",
+    green: "#62BB00",
   },
   fontFamily: {
-    rf: ['RF Tone', 'Graphik', 'sans-serif'],
+    rf: ["RF Tone", "Graphik", "sans-serif"],
   },
 
   fontSize: {
-    'h1': '3.5rem',
-    'h2': '2rem',
-    'h3': '1.5rem',
-    'h4': '1.25rem',
-    'h5': '1rem',
-    'h6': '0.875rem',
+    h1: "3.5rem",
+    h2: "2rem",
+    h3: "1.5rem",
+    h4: "1.25rem",
+    h5: "1rem",
+    h6: "0.875rem",
 
-    xs: ['0.75rem', { lineHeight: '1rem' }],
-    sm: ['0.875rem', { lineHeight: '1.25rem' }],
-    base: ['1rem', { lineHeight: '1.5rem' }],
-    lg: ['1.125rem', { lineHeight: '1.75rem' }],
-    xl: ['1.25rem', { lineHeight: '1.75rem' }],
-    '2xl': ['1.5rem', { lineHeight: '2rem' }],
-    '3xl': ['1.875rem', { lineHeight: '2.25rem' }],
-    '4xl': ['2.25rem', { lineHeight: '2.5rem' }],
-    '5xl': ['3rem', { lineHeight: '1' }],
-    '6xl': ['3.75rem', { lineHeight: '1' }],
-    '7xl': ['4.5rem', { lineHeight: '1' }],
-    '8xl': ['6rem', { lineHeight: '1' }],
-    '9xl': ['8rem', { lineHeight: '1' }],
+    xs: ["0.75rem", { lineHeight: "1rem" }],
+    sm: ["0.875rem", { lineHeight: "1.25rem" }],
+    base: ["1rem", { lineHeight: "1.5rem" }],
+    lg: ["1.125rem", { lineHeight: "1.75rem" }],
+    xl: ["1.25rem", { lineHeight: "1.75rem" }],
+    "2xl": ["1.5rem", { lineHeight: "2rem" }],
+    "3xl": ["1.875rem", { lineHeight: "2.25rem" }],
+    "4xl": ["2.25rem", { lineHeight: "2.5rem" }],
+    "5xl": ["3rem", { lineHeight: "1" }],
+    "6xl": ["3.75rem", { lineHeight: "1" }],
+    "7xl": ["4.5rem", { lineHeight: "1" }],
+    "8xl": ["6rem", { lineHeight: "1" }],
+    "9xl": ["8rem", { lineHeight: "1" }],
   },
   fontWeight: {
-    'thin': '100',
-    'extrathin': '200',
-    'roman': '300',
-    'link': '400',
-    'medium': '500',
-    'semibold': '600',
-    'bold': '700',
-    'extrabold': '800',
-    'black': '900',
+    thin: "100",
+    extrathin: "200",
+    roman: "300",
+    link: "400",
+    medium: "500",
+    semibold: "600",
+    bold: "700",
+    extrabold: "800",
+    black: "900",
   },
 
   container: {
@@ -68,24 +68,27 @@ export const theme = {
     },
   },
   extend: {
+    backgroundColor: {
+      "rgba-1": "rgba(228, 231, 236, 1)",
+    },
     borderRadius: {
-      '4xl': '2,5rem', //40px
-      '5xl': '6.25rem',  // 100px
-      '6xl': '62.5rem', //1000px
-      '7xl': '',
+      "4xl": "2,5rem", //40px
+      "5xl": "6.25rem", // 100px
+      "6xl": "62.5rem", //1000px
+      "7xl": "",
     },
     boxShadow: {
-      '3xl': '0px 20px 20px 0px rgba(0, 0, 0, 0.20)'
+      "3xl": "0px 20px 20px 0px rgba(0, 0, 0, 0.20)",
     },
     spacing: {
-        '25': '100px',
-      },
+      25: "100px",
+    },
 
     width: {
-      '52': '52px',
+      52: "52px",
     },
     margin: {
-      '14.5': '58px',
+      14.5: "58px",
     },
     keyframes: {
       "accordion-down": {
@@ -102,19 +105,19 @@ export const theme = {
       "accordion-up": "accordion-up 0.2s ease-out",
     },
     screens: {
-      '2xl': { 'max': '1536px' },
+      "2xl": { max: "1536px" },
       // => @media (max-width: 1536px) { ... }
 
-      'xl': { 'max': '1280px' },
+      xl: { max: "1280px" },
       // => @media (max-width: 1280px) { ... }
 
-      'lg': { 'max': '1024px' },
+      lg: { max: "1024px" },
       // => @media (max-width: 1024px) { ... }
 
-      'md': { 'max': '768px' },
+      md: { max: "768px" },
       // => @media (max-width: 768px) { ... }
 
-      'sm': { 'max': '640px' },
+      sm: { max: "640px" },
       // => @media (max-width: 640px) { ... }
     },
   },
