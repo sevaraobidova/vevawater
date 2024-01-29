@@ -2,13 +2,13 @@ import React from 'react'
 import { Button } from '../../ui/button'
 import { Link } from 'react-router-dom'
 
-export default function MyButton({backgroundColor, link, children, ...props}) {
+export default function MyButton({backgroundColor, link, type, children, ...props}) {
   const buttonClasses = ({
         'bg-white text-black font-light': backgroundColor === 'white',
         'bg-black text-white': !backgroundColor,
       });
   return (
-      <Button asChild className={buttonClasses} {...props}><Link to={link}>{children}</Link></Button>
+      <Button asChild className={buttonClasses} type={type} {...props}><Link to={link}>{children}</Link></Button>
   )
 }
 
