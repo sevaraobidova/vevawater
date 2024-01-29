@@ -24,6 +24,11 @@
     scrollbar-color: white #1CBBEE;
 }
 
+#inputID1::placeholder, #inputID2::placeholder {
+  color: #000000;
+  opacity: 1;
+}
+
 ::-webkit-scrollbar {
     width: 10px;
   }
@@ -49,6 +54,18 @@ z-index: 999;
   height: 200px;
   }
 
+  .wave1 {
+    --mask: radial-gradient(178.89px at 50% calc(100% - 240px),#000 99%,#0000 101%) calc(50% - 160px) 0/320px 100%,radial-gradient(178.89px at 50% calc(100% + 160px),#0000 99%,#000 101%) 50% calc(100% - 80px) /320px 100% repeat-x;
+    -webkit-mask: var(--mask);
+   mask: var(--mask);
+   position: sticky;
+  top: 0px;
+  width: 100%;
+  z-index: 999;
+    background: rgb(236, 239, 246);
+    height: 200px;
+    }
+
     @media (max-width: 700px) {
       .wave {
         --mask: radial-gradient(111.8px at 50% calc(100% - 150px),#000 99%,#0000 101%) calc(50% - 100px) 0/200px 100%,radial-gradient(111.8px at 50% calc(100% + 100px),#0000 99%,#000 101%) 50% calc(100% - 50px) /200px 100% repeat-x;
@@ -56,4 +73,11 @@ z-index: 999;
         height: 220px;
         z-index: 0;
     }
+    .wave1 {
+      --mask: radial-gradient(111.8px at 50% calc(100% - 150px),#000 99%,#0000 101%) calc(50% - 100px) 0/200px 100%,radial-gradient(111.8px at 50% calc(100% + 100px),#0000 99%,#000 101%) 50% calc(100% - 50px) /200px 100% repeat-x;
+      -webkit-mask: var(--mask);
+      height: 220px;
+      z-index: 0;
+      background: rgb(236, 239, 246);
+  }
     }
