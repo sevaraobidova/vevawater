@@ -46,7 +46,7 @@ export default function Header() {
           </div>
 
         </div>
-        <FormLocation size="" visibility="hidden sm:block" />
+        <FormLocation size="hidden sm:block sm:w-full" visibility="hidden sm:block" />
       </nav>
     </div>
   )
