@@ -70,6 +70,8 @@ export const theme = {
   extend: {
     backgroundColor: {
       "rgba-1": "rgba(228, 231, 236, 1)",
+      "rgb-2": "rgba(242, 244, 247, 1)",
+      "rgb-3": "rgba(152, 162, 179, 1)",
     },
     borderRadius: {
       "4xl": "2,5rem", //40px

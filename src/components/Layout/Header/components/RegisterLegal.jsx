@@ -4,7 +4,7 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import MyButton from "../../../global/Button/Button";
 
-export default function Register() {
+export default function RegisterLegal() {
   const formScheme = yup.object().shape({
     name: yup.string().required("The name field is required").min(3),
     number: yup
@@ -39,21 +39,6 @@ export default function Register() {
   }
   return (
     <div className="container w-[464px] h-[462px] bg-white border rounded-[20px] pt-5">
-      <div class="inline-flex">
-        <button
-          type="button"
-          className="h-[62px]  px-5 mb-2 text-lg font-medium text-gray-900 focus:outline-none bg-white rounded-t-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-        >
-          Физ. лицо
-        </button>
-
-        <button
-          type="button"
-          className=" h-[62px]  px-5 me-2 mb-2 text-lg font-medium text-gray-900 focus:outline-none bg-white rounded-t-lg  hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-        >
-          Юр. лицо
-        </button>
-      </div>
       <h1 className="text-3xl font-black my-5 font-rf ">Регистрация</h1>
       <FormProvider {...methods} className="grid gap-6 mb-6 md:grid-cols-2">
         <form onSubmit={handleSubmit(onSubmit)}>
