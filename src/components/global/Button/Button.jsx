@@ -9,7 +9,7 @@ export default function MyButton({backgroundColor, link, shadow, type, children,
         'shadow-3xl': shadow === 'yes',
       });
   return (
-      <Button asChild className={buttonClasses} type={type} {...props} ><Link to={link}>{children}</Link></Button>
+      <Button asChild type={type} className={buttonClasses} {...props} ><Link to={link}>{children}</Link></Button>
   )
 }
 
