@@ -1,6 +1,6 @@
 function Language() {
     return ( 
-        <form  action="">
+        <form name="lang" action="">
             <div className="flex self-center  py-3 px-3 bg-white rounded-l-3xl  sm:flex-none   sm:rounded-5xl">
 
             <select className="">
