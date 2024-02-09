@@ -34,12 +34,12 @@ export default function InformationCards() {
   const flexBegin = {
     display: "flex",
     justifyContent: "flex-start",
-    backgroundColor: "red",
+    // backgroundColor: "red",
   };
   return (
     <div
       style={flexBegin}
-      className="container mt-[60px] mb-[80px] flex justify-start items-start bg-blue"
+      className="container mt-[60px] mb-[80px]"
     >
       <Swiper
         grabCursor={true}

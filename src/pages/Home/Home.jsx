@@ -12,11 +12,13 @@ export default function Home() {
       <div className="wave1 z-0 static"></div>
       <InformationCards />
       <About />
+      <div className='container mx-auto'>
       <Telegram
         bg={`bg-blue w-full hidden `}
         visibility="block"
         color="white"
       />
+      </div>
     </div>
   );
 }
