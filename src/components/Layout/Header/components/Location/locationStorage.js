@@ -6,7 +6,7 @@ import axios from "axios";
 
 const { latitude, longitude, error } = useGeolocation();
 const { isLoading, isError } = useQuery({
-    queryKey: ['saveLocation', latitude, longitude],
+    queryKey: [['saveLocation'], latitude, longitude],
     queryFn: () =>
         saveLocationToBackend({
             latitude,

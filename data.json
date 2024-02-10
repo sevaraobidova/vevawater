@@ -1,61 +1,8 @@
 {
   "users": [
-    {
-      "id": "ccce",
-      "latitude": 41.27505629849584,
-      "longitude": 69.27925897965908,
-      "address": "Abdurauf Fitrat ko'chasi 81, Тоshkent, Toshkent, Uzbekistan"
-    },
-    {
-      "id": "e39e",
-      "latitude": 41.27689787156554,
-      "longitude": 69.29413735808339,
-      "address": "Abdurauf Fitrat ko'chasi 81, Тоshkent, Toshkent, Uzbekistan"
-    },
-    {
-      "id": "9378",
-      "latitude": 41.27370644733471,
-      "longitude": 69.2940756410826,
-      "address": "Abdurauf Fitrat ko'chasi 81, Тоshkent, Toshkent, Uzbekistan"
-    },
-    {
-      "id": "04db"
-    },
-    {
-      "id": "54d7"
-    },
-    {
-      "id": "852e"
-    },
-    {
-      "id": "43a2"
-    },
-    {
-      "id": "97de"
-    },
-    {
-      "id": "8cb7"
-    },
-    {
-      "id": "9ec1"
-    },
-    {
-      "id": "619b"
-    },
-    {
-      "id": "4a37"
-    },
-    {
-      "id": "051d"
-    },
-    {
-      "id": "0375"
-    },
-    {
-      "id": "814f"
-    },
-    {
-      "id": "f578"
-    }
+    
+  ],
+  "locationSaved":[
+
   ]
 }

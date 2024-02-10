@@ -22,8 +22,10 @@
     "@tanstack/react-query-devtools": "^5.17.21",
     "axios": "^1.6.3",
     "class-variance-authority": "^0.7.0",
+
     "clsx": "^2.1.0",
     "html2canvas": "^1.4.1",
+
     "install": "^0.13.0",
     "json-server": "^1.0.0-alpha.19",
     "jspdf": "^2.5.1",
