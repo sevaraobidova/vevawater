@@ -1,40 +1,39 @@
-import { useQuery } from "@tanstack/react-query";
+import { useQueryClient,useMutation,useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
-export const saveLocationToBackend = async (data) => {
-    console.log(data)
-    try {
-        const response = await axios.post('http://localhost:3000/users', {
-            latitude: data.latitude,
-            longitude: data.longitude,
-            address: data.address,  // Assuming `data.address` is a string
-        });
 
-        if (response.status === 201) {
-            console.log('Location saved successfully');
-            return response.data;
-        } else {
-            console.error('Failed to save location:', response.statusText);
-            throw new Error('Failed to save location');
-        }
-    } catch (error) {
-        console.error('Error saving location:', error.message);
-        throw error;
-    }
-};
+ const useSaveLocationToBackend = (latitude,longitude,address) => {
+     const mutation = useMutation({
+         mutationFn: async () => {
+             const response = await axios.post('http://localhost:3000/users', {
+                 latitude: latitude,
+                 longitude: longitude,
+                 address: address,
+             });
+             return response.data;
+         },
+         onSuccess: async () => {
+             // Handle success, such as updating query data
+         },
+     });
+
+     return mutation;
+
+    };
+
+    
+
+
 // api.js
 
-// export const getSavedLocationsFromBackend = async () => {
-//     try {
-//         const response = await axios.get('http://localhost:3000/users'); // Replace with your actual API endpoint
-//         return response.data;
-//     } catch (error) {
-//         console.error('Error fetching saved locations:', error.message);
-//         throw error;
-//     }
-// };
 
-
- export const getSavedLocationsFromBackend = () => {
-    return useQuery(['users'],);
+const useGetSavedLocationsFromBackend = () => {
+    return useQuery({
+        queryKey: ['locationSaved'], // Use a string or number as the query key
+        queryFn: async () => {
+            const response = await axios.get('http://localhost:3000/locationSaved');
+            return response.data;
+        },
+    });
 };
+export { useSaveLocationToBackend,useGetSavedLocationsFromBackend}

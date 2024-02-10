@@ -1,45 +1,49 @@
 import { Select,SelectContent,SelectTrigger,SelectValue, SelectGroup, SelectItem } from "/src/components/ui/select";
-import { getSavedLocationsFromBackend } from "./api";
-import { useEffect,useState } from "react";
-export function SelectLocation({ onSelect,onMapButtonClick }) {
+import { useSaveLocationToBackend,useGetSavedLocationsFromBackend } from "./api";
+import { useEffect, useState } from "react";
+export function SelectLocation({ onSelect, onMapButtonClick }) {
+    const getSavedLocationsQuery = useGetSavedLocationsFromBackend();
+    const saveLocationMutation = useSaveLocationToBackend();
     const [savedLocations, setSavedLocations] = useState([]);
     const [isSelectExpanded, setIsSelectExpanded] = useState(false);
+    console.log(saveLocationMutation);
     useEffect(() => {
         // Fetch saved locations from the backend when the component mounts
-        const fetchSavedLocations = async () => {
-            try {
-                const locations =  getSavedLocationsFromBackend();
+        getSavedLocationsQuery.refetch();
+    }, [getSavedLocationsQuery.refetch]);
+    useEffect(() => {
+        if (getSavedLocationsQuery.data) {
+            // Filter out duplicate addresses
+            const uniqueLocations = getSavedLocationsQuery.data.filter(
+                (location, index, self) => {
+                    return (
+                        index ===
+                        self.findIndex((t) => t.address === location.address)
+                    );
+                }
+            );
 
-                // Filter out duplicate addresses
-                const uniqueLocations = locations.filter(
-                    (location, index, self) => {
-                        return (
-                            index ===
-                            self.findIndex(
-                                (t) => t.address === location.address
-                            )
-                        );
-                    }
-                );
+            setSavedLocations(uniqueLocations);
+        }
+    }, [getSavedLocationsQuery.data]);
 
-                setSavedLocations(uniqueLocations);
-            } catch (error) {
-                console.error(
-                    'Error fetching saved locations:',
-                    error.message
-                );
-            }
-        };
+    const handleLocationSelect = async (selectedValue) => {
+        try {
+            // Use the saveLocationMutation to save the location to the backend
+            await saveLocationMutation.mutateAsync({
+                latitude: selectedValue.latitude,
+                longitude: selectedValue.longitude,
+                address: selectedValue.address,
+            });
 
-        fetchSavedLocations();
-    }, []);
+            // Pass the selected location back to the parent component
+            onSelect(selectedValue);
 
-
-    const handleLocationSelect = (selectedValue) => {
-        // Pass the selected location back to the parent component
-        onSelect(selectedValue);
-        // Collapse the select after selecting an option
-        setIsSelectExpanded(false);
+            // Collapse the select after selecting an option
+            setIsSelectExpanded(false);
+        } catch (error) {
+            console.error('Error saving location:', error.message);
+        }
     };
 
     const toggleSelectExpansion = () => {
@@ -48,13 +52,14 @@ export function SelectLocation({ onSelect,onMapButtonClick }) {
    
     return (
         <>
+            
         <Select
             expanded={isSelectExpanded}
             onSelect={handleLocationSelect}
         onBlur={()=>setIsSelectExpanded(false)}>
             <SelectTrigger
                 className={`w-full ${isSelectExpanded ? " bg-white" : ""}`}
-                onClick={toggleSelectExpansion}>
+                    onClick={toggleSelectExpansion}>
                 <SelectValue placeholder="Select a Location" />
                 {isSelectExpanded && (
                     <div>
