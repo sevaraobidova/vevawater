@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import EditButton from './EditButton';
 import edit from '/src/assets/images/edit.svg'
+import UserEdit from './UserEdit';
 
 const UserProfile = () => {
   // Sample user data
@@ -10,20 +11,9 @@ const UserProfile = () => {
     addresses: ['г. Ташкент, улица Мукими, 166 ...', 'г. Ташкент, улица Арнасай, 2 ...'],
   });
 
-//   const [isEditing, setIsEditing] = useState(false);
-
-//   const handleEditClick = () => {
-//     setIsEditing(true);
-//   };
-
-//   const handleSave = (newUserData) => {
-//     setUserData(newUserData);
-//     setIsEditing(false);
-//   };
-
   return (
     <div>
-      <table className='mt-[50px] text-[18px] sm:text-[14px]'>
+      <table className='mt-[50px] text-[18px] sm:text-[14px] mb-[50px] w-[60%] sm:w-[100%]'>
         <tbody >
           <tr className='bg-gray-light '>
             <td className='font-roman sm:text-[14px] py-[12px] px-[20px]'>Фамилия и имя:</td>
@@ -45,18 +35,9 @@ const UserProfile = () => {
                    <td className='font-bold'>{address}</td>
                   </tr>
                 ))}
-
         </tbody>
       </table>
-{/* <EditButton name='Редактировать' img={edit}/> */}
-      {/* <button onClick={handleEditClick}>Edit Profile</button> */}
-{/* 
-      {isEditing && (
-        <Modal
-          userData={userData}
-          onSave={handleSave}
-        />
-      )} */}
+<UserEdit/>
     </div>
   );
 };

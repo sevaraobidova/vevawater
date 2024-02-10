@@ -4,6 +4,7 @@ import doc from '/src/assets/images/doc.svg'
 import edit from '/src/assets/images/edit.svg'
 import html2canvas from 'html2canvas'
 import jsPDF from 'jspdf'
+import LegalEdit from './LegalEdit';
 
 const LegalProfile = () => {
   // Sample user data
@@ -29,16 +30,6 @@ const LegalProfile = () => {
     })
   }
 
-//   const [isEditing, setIsEditing] = useState(false);
-
-//   const handleEditClick = () => {
-//     setIsEditing(true);
-//   };
-
-//   const handleSave = (newUserData) => {
-//     setUserData(newUserData);
-//     setIsEditing(false);
-//   };
   return (
     <div>
       <table className='dogovor mt-[50px] sm:mt-[25px] text-[18px] w-[60%] sm:text-[14px] sm:w-[100%]'>
@@ -71,16 +62,8 @@ const LegalProfile = () => {
       </table>
 <div className='flex gap-[30px] mt-[50px] sm:mt-[25px] sm:flex-col sm:gap-[12px]'>
 <EditButton img={doc} disabled={!(loader===false)} name='Скачать договор' func={downloadPDF} style='sm:w-[100%]'/>
-<EditButton name='Редактировать' img={edit} style='sm:w-[100%]'/>
-</div>
-      {/* <button onClick={handleEditClick}>Edit Profile</button> */}
-{/* 
-      {isEditing && (
-        <Modal
-          userData={userData}
-          onSave={handleSave}
-        />
-      )} */}
+<LegalEdit /> 
+</div>  
     </div>
   );
 };

@@ -15,12 +15,12 @@ import { useForm, Controller, FormProvider } from "react-hook-form"
 import { z } from "zod"
 
 
-export default function UserEdit () {
+export default function LegalEdit () {
 
     return (
         <Dialog>
             <DialogTrigger>
-            <EditButton img={edit} name='Редактировать' style='sm:w-[100%]'/>
+                <EditButton img={edit} name='Редактировать' style='sm:w-[100%]'/>
             </DialogTrigger>
             <DialogContent className='rounded-[20px] px-[28px]'>
                 <DialogHeader className="text-[32px] font-bold text-start">Редактировать</DialogHeader>
@@ -35,7 +35,3 @@ export default function UserEdit () {
         </Dialog>
     )
                     }
-
-
-
- 
