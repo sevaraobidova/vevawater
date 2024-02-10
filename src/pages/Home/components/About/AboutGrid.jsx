@@ -10,21 +10,22 @@ export default function AboutGrid() {
     <>
     <div className='grid grid-cols-2 grid-rows-3 gap-3 w-[73%] sm:hidden'>
       {
-        cardData.map((item, i)=> (<AboutCard key={i} title={item.title} description={item.description} class={item.class}/>))
+        cardData.map((item, i)=> (<AboutCard key={i} title={item.title} description={item.description} style={item.col}/>))
       }
     </div>
-    <Swiper
+    {/* <Swiper
     modules={[Autoplay]}
     autoplay={true}
     spaceBetween={0}
     slidesPerView={1}
+    className=''
     >
     {
         cardData.map((item, index)=> (<SwiperSlide key={index}>
-          <AboutCard key={index} title={item.title} description={item.description} class={item.width}/>
+          <AboutCard key={index} title={item.title} description={item.description} style='sm:w-full sm:h-[350px]'/>
         </SwiperSlide>))
       }
-    </Swiper>
+    </Swiper> */}
     </>
   )
 }

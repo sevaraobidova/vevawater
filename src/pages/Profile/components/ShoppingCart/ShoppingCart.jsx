@@ -1,10 +1,16 @@
-import React from 'react'
-import Title from '../Title'
+// ShoppingCart.jsx
+import React from 'react';
+import ShoppingCartLeft from './ShoppingCartLeft';
+import CardRight from './CardRight';
+
 
 export default function ShoppingCart() {
   return (
     <div>
-      <Title text='Моя корзина'/>
+      <div className='container mx-auto flex justify-between mt-[60px] mb-[70px]'>
+        <ShoppingCartLeft/>
+        <CardRight/>
+      </div>
     </div>
-  )
+  );
 }
